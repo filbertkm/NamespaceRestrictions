@@ -19,7 +19,7 @@
  * @since 0.1
  *
  * @file
- * @ingroup NamespaceRestriction
+ * @ingroup NamespaceRestrictions
  *
  * @licence GNU GPL v2+
  * @author Katie Filbert < aude.wiki@gmail.com >
@@ -29,25 +29,25 @@ if ( !defined( 'MEDIAWIKI' ) ) {
     die( 'Not a valid entry point.' );
 }
 
-define( 'NAMESPACE_RESTRICTION_VERSION', '0.1' );
+define( 'NAMESPACE_RESTRICTIONS_VERSION', '0.1' );
 
 $wgExtensionCredits['other'][] = array(
     'path' => __DIR__,
-    'name' => 'Namespace Restriction',
-    'version' => NAMESPACE_RESTRICTION_VERSION,
+    'name' => 'Namespace Restrictions',
+    'version' => NAMESPACE_RESTRICTIONS_VERSION,
     'author' => 'Katie Filbert',
-    'url' => 'https://www.mediawiki.org/wiki/Extension:NamespaceRestriction',
-    'descriptionmsg' => 'namespacerestriction-desc'
+    'url' => 'https://www.mediawiki.org/wiki/Extension:NamespaceRestrictions',
+    'descriptionmsg' => 'namespacerestrictions-desc'
 );
 
-$wgExtensionMessagesFiles['NamespaceRestriction'] = __DIR__ . '/NamespaceRestriction.i18n.php';
+$wgExtensionMessagesFiles['NamespaceRestrictions'] = __DIR__ . '/NamespaceRestrictions.i18n.php';
 
-$wgAutoloadClasses['NamespaceRestrictionHooks'] = __DIR__ . '/NamespaceRestriction.hooks.php';
+$wgAutoloadClasses['NamespaceRestrictionsHooks'] = __DIR__ . '/NamespaceRestrictions.hooks.php';
 
 $wgAutoloadClasses['UserPermissionChecker'] = __DIR__ . '/includes/UserPermissionChecker.php';
 
-$wgHooks['RegisterUnitTests'][]			= 'NamespaceRestrictionHooks::onRegisterUnitTests';
-$wgHooks['TitleQuickPermissions'][]		= 'NamespaceRestrictionHooks::onTitleQuickPermissions';
+$wgHooks['RegisterUnitTests'][]			= 'NamespaceRestrictionsHooks::onRegisterUnitTests';
+$wgHooks['TitleQuickPermissions'][]		= 'NamespaceRestrictionsHooks::onTitleQuickPermissions';
 
 /**
  * Set minimum permissions required for creating pages in each namespace.

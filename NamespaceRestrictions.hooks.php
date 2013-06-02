@@ -19,13 +19,13 @@
  * @since 0.1
  *
  * @file
- * @ingroup NamespaceRestriction
+ * @ingroup NamespaceRestrictions
  *
  * @licence GNU GPL v2+
  * @author Katie Filbert < aude.wiki@gmail.com >
  */
 
-class NamespaceRestrictionHooks {
+class NamespaceRestrictionsHooks {
 
 	/**
 	 * Hook to add PHPUnit test cases.
