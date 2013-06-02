@@ -64,6 +64,10 @@ class NamespaceRestrictionsHooks {
 	public static function onTitleQuickPermissions( $title, $user, $action, $errors, $doExpensiveQueries, $short ) {
 		global $wgNamespaceCreateProtection;
 
+		if ( ! isset( $wgNamespaceCreateProtection ) || ! is_array( $wgNamespaceCreateProtection ) ) {
+			return true;
+		}
+
 		$userPermissionChecker = new UserPermissionChecker( $wgNamespaceCreateProtection );
 
 		if ( $action === 'create' ) {
