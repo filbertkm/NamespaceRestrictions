@@ -1,9 +1,9 @@
 About
-===
+--- 
 MediaWiki extension to allow restricting page creation per namespace.
 
 Configuration
-===
+---
 
 Set minimum permissions required for creating pages in each namespace.
 If multiple permisison are listed, a user needs to have all of them
